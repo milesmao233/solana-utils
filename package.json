@@ -1,0 +1,26 @@
+{
+  "name": "@CryptoQuantTeam/solana-utils",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/your-package-name.git"
+  },
+  "keywords": [
+    "solana",
+    "blockchain",
+    "transaction"
+  ],
+  "author": "Miles Mao <milesmao233@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@solana/web3.js": "^1.91.1"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5"
+  }
+}
