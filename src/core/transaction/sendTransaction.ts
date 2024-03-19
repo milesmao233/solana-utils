@@ -9,7 +9,7 @@ import {
     Commitment,
     SendOptions,
 } from '@solana/web3.js'
-import { sleep } from '../utils'
+import { sleep } from '../../utils'
 
 const sendAndConfirmVersionedTransaction = async (
     c: Connection,
