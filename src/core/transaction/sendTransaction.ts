@@ -80,7 +80,7 @@ export const buildAndSendTxnWithLogs = async (
         return sig
     } catch (e: any) {
         console.log(e)
-        process.stdout.write(e.logs.toString())
+        // process.stdout.write(e.logs.toString())
         await sleep(5000)
         const sig = e.toString().split(' failed ')[0].split('Transaction ')[1]
         const res: VersionedTransactionResponse | null = await c.getTransaction(
