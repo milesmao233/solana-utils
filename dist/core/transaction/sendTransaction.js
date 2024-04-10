@@ -51,15 +51,19 @@ const buildAndSendTxnWithLogs = async (c, tx, owner, signers, withLogsIfSuccess 
     }
     catch (e) {
         console.log(e);
+        throw e;
         // process.stdout.write(e.logs.toString())
-        await (0, utils_1.sleep)(5000);
-        const sig = e.toString().split(' failed ')[0].split('Transaction ')[1];
-        const res = await c.getTransaction(sig, {
-            commitment: 'confirmed',
-            maxSupportedTransactionVersion: 6,
-        });
-        console.log('Txn', res.meta.logMessages);
-        return sig;
+        // await sleep(5000)
+        // const sig = e.toString().split(' failed ')[0].split('Transaction ')[1]
+        // const res: VersionedTransactionResponse | null = await c.getTransaction(
+        //     sig,
+        //     {
+        //         commitment: 'confirmed',
+        //         maxSupportedTransactionVersion: 6,
+        //     }
+        // )
+        // console.log('Txn', res!.meta!.logMessages)
+        // return sig
     }
 };
 exports.buildAndSendTxnWithLogs = buildAndSendTxnWithLogs;
